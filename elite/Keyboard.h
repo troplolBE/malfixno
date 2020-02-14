@@ -81,17 +81,17 @@ typedef struct
 
 class Keyboard_ : public Print
 {
-private:
-  KeyReport _keyReport;
-  void sendReport(KeyReport* keys);
-public:
-  Keyboard_(void);
-  void begin(void);
-  void end(void);
-  size_t write(uint8_t k);
-  size_t press(uint8_t k);
-  size_t release(uint8_t k);
-  void releaseAll(void);
+  private:
+    KeyReport _keyReport;
+    void sendReport(KeyReport* keys);
+  public:
+    Keyboard_(void);
+    void begin(void);
+    void end(void);
+    size_t write(uint8_t k);
+    size_t press(uint8_t k);
+    size_t release(uint8_t k);
+    void releaseAll(void);
 };
 extern Keyboard_ Keyboard;
 extern int lang;
