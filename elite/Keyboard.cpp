@@ -152,7 +152,7 @@ const uint8_t _asciimap[128] =
   0x38,          // =
   0x64 | SHIFT,    // >
   0x10 | SHIFT,    // ?
-  0x27,            // @
+  0x1f,            // @
   0x14 | SHIFT,    // A
   0x05 | SHIFT,    // B
   0x06 | SHIFT,    // C
