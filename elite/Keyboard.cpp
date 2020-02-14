@@ -401,18 +401,18 @@ size_t Keyboard_::press(uint8_t k)
       return 0;
     }
 
-#ifdef ADD_ALTGR
-    if (!_altFine) {
-      if (lang == 0) {
-        initAltGr();
-      } else {
-        initAltGrEN();
+    if (lang == 1) {
+      if (!_altFine) {
+        if (lang == 1) {
+          initAltGr();
+        } else {
+          initAltGrEN();
+        }
+      }
+      if (_altGrMap[oldKey]) {
+        _keyReport.modifiers |= 0x40;
       }
     }
-    if (_altGrMap[oldKey]) {
-      _keyReport.modifiers |= 0x40;
-    }
-#endif
 
     if (k & 0x80) {						// it's a capital letter or other character reached with shift
       _keyReport.modifiers |= 0x02;	// the left shift modifier
@@ -463,18 +463,18 @@ size_t Keyboard_::release(uint8_t k)
       return 0;
     }
 
-#ifdef ADD_ALTGR
-    if (!_altFine) {
-      if (lang == 0) {
-        initAltGr();
-      } else {
-        initAltGrEN();
+    if (lang == 1) {
+      if (!_altFine) {
+        if (lang == 1) {
+          initAltGr();
+        } else {
+          initAltGrEN();
+        }
+      }
+      if (_altGrMap[oldKey]) {
+        _keyReport.modifiers &= ~(0x40);
       }
     }
-    if (_altGrMap[oldKey]) {
-      _keyReport.modifiers &= ~(0x40);
-    }
-#endif
 
     if (k & 0x80) {							// it's a capital letter or other character reached with shift
       _keyReport.modifiers &= ~(0x02);	// the left shift modifier
