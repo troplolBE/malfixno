@@ -368,7 +368,7 @@ void initAltGr() {
   _altGrMap[123] = true; // {
   _altGrMap[124] = true; // | fixed
   _altGrMap[125] = true; // } fixed
-  _altGrMap[127] = true; // ~
+  _altGrMap[126] = true; // ~
 }
 
 void initAltGrEN() {
