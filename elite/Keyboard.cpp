@@ -182,7 +182,7 @@ const uint8_t _asciimap[128] =
   0x22,          // [
   0x64,          // bslash
   0x30,          // ]
-  0x22,          // ^
+  0x2f,          // ^
   0x2e | SHIFT,        // _
   0x24,          // `
   0x14,          // a
